@@ -1,4 +1,4 @@
-* 8085 Assembly Language Simulator
+*8085-Assembly-Language-Simulator
 - Deployable on:
 	- Desktop
 	- Android

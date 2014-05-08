@@ -1,0 +1,9 @@
+JMP 95
+DB  7, 4
+LDA  93
+MOV B, A
+LDA  94
+STA  93
+MOV A, B
+STA  94
+HLT

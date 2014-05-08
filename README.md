@@ -1,6 +1,5 @@
 Assembler-Linker-Loader for 8085 assembly language
----------------------------------------------------
----------------------------------------------------
+====================================================
 Contents
 ----------
 - Introduction 
@@ -8,13 +7,13 @@ Contents
 	- OVERVIEW 
 - Requirements 
 - Architecture / Design 
-- CODE & CONSTRUCTION PRINCIPLES 
+	- CODE & CONSTRUCTION PRINCIPLES 
 - End User Manual 
-- USERS 
+	- USERS 
 
-1 Introduction
+Introduction
 --------------------
-** PURPOSE
+**PURPOSE**
 The over reaching goal of the project is to prepare an application that converts the application deﬁned syntax respecting code to a GNUSIM 8085 executable code through a usual process of Assembling, Linking and Loading the code. The application developed, aims to help a general audience including CS students professors, to easily write a code using a simple application deﬁned syntax and hence convert it to the corresponding GNUSIM 8085 executable code. The application is published under GPL and is open for the developers.
 Tha application is developed using JAVA and LibGDX library and can be deployed on:
 1.Desktop
@@ -22,7 +21,7 @@ Tha application is developed using JAVA and LibGDX library and can be deployed o
 3.WebPage
 4.Iphone
 
-** OVERVIEW
+**OVERVIEW**
 Input
 - Software accepts multiple assembly ﬁles written using the deﬁned instruction set.
 Assembler - Pass1
@@ -34,7 +33,8 @@ Linker
 Loader
 - The user is asked for the memory location where he wants to load his program. The programs are then dynamically loaded into those speciﬁc memory locations.The ouput of ﬁlename.s.8085 ﬁle can then be run on GnuSim80855.
 
-** Requirements
+Requirements
+--------------
 General:
 - JAVA/JVM or .jar execution supporting system
 - I/O: Monitor, Keyboard, Mouse
@@ -44,8 +44,9 @@ Optional:
 - Desktop: support for OpenGL 2.0
 - Iphone: support for OpenGL 2.0
 
-** Architecture / Design
-CODE & CONSTRUCTION PRINCIPLES
+Architecture / Design
+------------------------
+**CODE & CONSTRUCTION PRINCIPLES**
 - Design specs of an assembler:
 (i) Identify the information necessary to perform a task.
 
@@ -68,8 +69,9 @@ their actual code too using the above mentioned contatiners.
 5. linkCode: links ﬁles generated after replacing opcodes
 6. loadCode: loads the code at the user deﬁned location6
 
-** End User Manual
-USERS
+End User Manual
+------------------
+**USERS**
 -Run systemprogramming: jarrunnable:
 -Copy the code on to the screen and save it on the stack.
 Copy multiple number of codes on the screen and consequently save the m on the stack

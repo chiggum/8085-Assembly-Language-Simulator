@@ -14,6 +14,7 @@ Contents
 Introduction
 --------------------
 **PURPOSE**
+
 The over reaching goal of the project is to prepare an application that converts the application deﬁned syntax respecting code to a GNUSIM 8085 executable code through a usual process of Assembling, Linking and Loading the code. The application developed, aims to help a general audience including CS students professors, to easily write a code using a simple application deﬁned syntax and hence convert it to the corresponding GNUSIM 8085 executable code. The application is published under GPL and is open for the developers.
 Tha application is developed using JAVA and LibGDX library and can be deployed on:
 1.Desktop
@@ -64,22 +65,22 @@ Architecture / Design
 - Determine the processing necessary to obtain and maintain the information and perform the task.
 
 	- The Main processes/methods involved in our code are:
-		1. macroPreprocess : Prepreocesses Macros and creates a table
-		2. opCodePreprocess: preprocesses opCodes and stores length of opCodes with their actual code too using the above mentioned contatiners.
-		3. createSymbolTable: creates a symbol table.
-		4. replaceTable: replaces opcodes with their actual code.
-		5. linkCode: links ﬁles generated after replacing opcodes
-		6. loadCode: loads the code at the user deﬁned location6
+		- macroPreprocess : Prepreocesses Macros and creates a table
+		- opCodePreprocess: preprocesses opCodes and stores length of opCodes with their actual code too using the above mentioned contatiners.
+		- createSymbolTable: creates a symbol table.
+		- replaceTable: replaces opcodes with their actual code.
+		- linkCode: links ﬁles generated after replacing opcodes
+		- loadCode: loads the code at the user deﬁned location6
 
 End User Manual
 ------------------
 **USERS**
--Run systemprogramming: jarrunnable:
--Copy the code on to the screen and save it on the stack.
-- Copy multiple number of codes on the screen and consequently save the m on the stack using the button provided.
--Finally Assemble Pass 1 the code using the corresponding button.
--Output of assemble pass 1 will be the symbol table of the all the codes provided as the input.
--These symbol tables can be accessed by entering the index of the ﬁle and then clicking on ”Focus on Queried File”.
--Then one can proceed with the pass 2, linking and loading sequentially with the outputs shown at every step.
--The application demands the user to input an integer representing the location to load the input ﬁle.
--Finally the output ﬁle is shown which can be copied into the GNUSIM 8085 and hence can be executed.
+	- Run systemprogramming jar runnable:
+	- Copy the code on to the screen and save it on the stack.
+	- Copy multiple number of codes on the screen and consequently save the m on the stack using the button provided.
+	- Finally Assemble Pass 1 the code using the corresponding button.
+	- Output of assemble pass 1 will be the symbol table of the all the codes provided as the input.
+	- These symbol tables can be accessed by entering the index of the ﬁle and then clicking on ”Focus on Queried File”.
+	- Then one can proceed with the pass 2, linking and loading sequentially with the outputs shown at every step.
+	- The application demands the user to input an integer representing the location to load the input ﬁle.
+	- Finally the output ﬁle is shown which can be copied into the GNUSIM 8085 and hence can be executed.

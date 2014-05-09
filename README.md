@@ -16,11 +16,13 @@ Introduction
 **PURPOSE**
 
 The over reaching goal of the project is to prepare an application that converts the application deﬁned syntax respecting code to a GNUSIM 8085 executable code through a usual process of Assembling, Linking and Loading the code. The application developed, aims to help a general audience including CS students professors, to easily write a code using a simple application deﬁned syntax and hence convert it to the corresponding GNUSIM 8085 executable code. The application is published under GPL and is open for the developers.
-Tha application is developed using JAVA and LibGDX library and can be deployed on:
-1.Desktop
-2.Android
-3.WebPage
-4.Iphone
+
+The application is developed using JAVA and LibGDX library and can be deployed on:
+
+- Desktop
+- Android
+- WebPage
+- Iphone
 
 **OVERVIEW**
 
@@ -75,7 +77,8 @@ Architecture / Design
 End User Manual
 ------------------
 **USERS**
-	- Run systemprogramming jar runnable:
+
+	- Run systemprogramming jar runnable.
 	- Copy the code on to the screen and save it on the stack.
 	- Copy multiple number of codes on the screen and consequently save the m on the stack using the button provided.
 	- Finally Assemble Pass 1 the code using the corresponding button.

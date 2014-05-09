@@ -22,68 +22,64 @@ Tha application is developed using JAVA and LibGDX library and can be deployed o
 4.Iphone
 
 **OVERVIEW**
-Input
-- Software accepts multiple assembly ﬁles written using the deﬁned instruction set.
-Assembler - Pass1
-- In this part the input codes are converted to native 8085 code. Macros expansion is also taken care in here. To ease the programming for user, user can use his predeﬁned macros within another macro.
-Assembler - Pass2
-- Symbol Table for each ﬁle is generated and is stored in ﬁlename.table. After this all the labels are replaced by relative address values.
-Linker
-- Extern variables are handled in here. All the ﬁles are linked with each other.
-Loader
-- The user is asked for the memory location where he wants to load his program. The programs are then dynamically loaded into those speciﬁc memory locations.The ouput of ﬁlename.s.8085 ﬁle can then be run on GnuSim80855.
+
+-	Input
+	- Software accepts multiple assembly ﬁles written using the deﬁned instruction set.
+- Assembler - Pass1
+	- In this part the input codes are converted to native 8085 code. Macros expansion is also taken care in here. To ease the programming for user, user can use his predeﬁned macros within another macro.
+- Assembler - Pass2
+	- Symbol Table for each ﬁle is generated and is stored in ﬁlename.table. After this all the labels are replaced by relative address values.
+- Linker
+	- Extern variables are handled in here. All the ﬁles are linked with each other.
+- Loader
+	- The user is asked for the memory location where he wants to load his program. The programs are then dynamically loaded into those speciﬁc memory locations.The ouput of ﬁlename.s.8085 ﬁle can then be run on GnuSim80855.
 
 Requirements
 --------------
-General:
-- JAVA/JVM or .jar execution supporting system
-- I/O: Monitor, Keyboard, Mouse
-Speciﬁc:
-- Android: support for OpenGL 2.0
-Optional:
-- Desktop: support for OpenGL 2.0
-- Iphone: support for OpenGL 2.0
+- General:
+	- JAVA/JVM or .jar execution supporting system
+	- I/O: Monitor, Keyboard, Mouse
+
+- Speciﬁc:
+	- Android: support for OpenGL 2.0
+
+- Optional:
+	- Desktop: support for OpenGL 2.0
+	- Iphone: support for OpenGL 2.0
 
 Architecture / Design
 ------------------------
 **CODE & CONSTRUCTION PRINCIPLES**
 - Design specs of an assembler:
-(i) Identify the information necessary to perform a task.
+	- Identify the information necessary to perform a task.
 
-(ii) Design a suitable data structure to record the information.
+	- Design a suitable data structure to record the information.
 
-In our applicaton we used Map and List Contatiners to store the gathered information appropriately.
-Map.put(key, value) stores the key-value pair in the corresponding map
-Map.get(key) retrieves the value at the corresponding key.
-Key and value both are objects.
-Similarly, List.add(value) appends the list with the value and List.get(index) retrieves the value stored at the integer index speciﬁed.
+		- In our applicaton we used Map and List Contatiners to store the gathered information appropriately.
+		- Map.put(key, value) stores the key-value pair in the corresponding map
+		- Map.get(key) retrieves the value at the corresponding key.
+		- Key and value both are objects.
+		- Similarly, List.add(value) appends the list with the value and List.get(index) retrieves the value stored at the integer index speciﬁed.
 
-(iii) Determine the processing necessary to obtain and maintain the information and perform the task.
+- Determine the processing necessary to obtain and maintain the information and perform the task.
 
-The Main processes/methods involved in our code are:
-1. macroPreprocess : Prepreocesses Macros and creates a table
-2. opCodePreprocess: preprocesses opCodes and stores length of opCodes with
-their actual code too using the above mentioned contatiners.
-3. createSymbolTable: creates a symbol table.
-4. replaceTable: replaces opcodes with their actual code.
-5. linkCode: links ﬁles generated after replacing opcodes
-6. loadCode: loads the code at the user deﬁned location6
+	- The Main processes/methods involved in our code are:
+		1. macroPreprocess : Prepreocesses Macros and creates a table
+		2. opCodePreprocess: preprocesses opCodes and stores length of opCodes with their actual code too using the above mentioned contatiners.
+		3. createSymbolTable: creates a symbol table.
+		4. replaceTable: replaces opcodes with their actual code.
+		5. linkCode: links ﬁles generated after replacing opcodes
+		6. loadCode: loads the code at the user deﬁned location6
 
 End User Manual
 ------------------
 **USERS**
 -Run systemprogramming: jarrunnable:
 -Copy the code on to the screen and save it on the stack.
-Copy multiple number of codes on the screen and consequently save the m on the stack
-using the button provided.
+- Copy multiple number of codes on the screen and consequently save the m on the stack using the button provided.
 -Finally Assemble Pass 1 the code using the corresponding button.
--Output of assemble pass 1 will be the symbol table of the all the codes provided as the
-input.
--These symbol tables can be accessed by entering the index of the ﬁle and then clicking
-on ”Focus on Queried File”.
--Then one can proceed with the pass 2, linking and loading sequentially with the outputs
-shown at every step.
--The application demands the user to input an integer representing the location to load the
-input ﬁle.
--Finally the output ﬁle is shown which can be copied into the GNUSIM 8085 and hence
-can be executed.
+-Output of assemble pass 1 will be the symbol table of the all the codes provided as the input.
+-These symbol tables can be accessed by entering the index of the ﬁle and then clicking on ”Focus on Queried File”.
+-Then one can proceed with the pass 2, linking and loading sequentially with the outputs shown at every step.
+-The application demands the user to input an integer representing the location to load the input ﬁle.
+-Finally the output ﬁle is shown which can be copied into the GNUSIM 8085 and hence can be executed.
